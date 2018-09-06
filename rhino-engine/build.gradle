@@ -1,0 +1,55 @@
+description 'A utility library based on [mozilla rhino](https://github.com/mozilla/rhino) '
+group 'org.bizobj.rhinoengine'
+version '1.0'
+
+defaultTasks 'dist'
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
+    // https://mvnrepository.com/artifact/org.mozilla/rhino
+    compile group: 'org.mozilla', name: 'rhino', version: '1.7.10'
+}
+
+archivesBaseName = "bizobj-rhino-engine"
+eclipse.project.name = "bizobj-rhino-engine"
+
+//The output folder to store the distribution jars
+def distsOutputDir = "dist"
+
+task sourceJar(type: Jar, dependsOn: classes) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+task _clean(type: Delete) {
+	delete buildDir
+	delete distsDir
+	delete distsOutputDir
+}
+
+task distJar(type: Copy, dependsOn: [jar]) {
+	from libsDir
+	into "${distsOutputDir}/jars"
+	include '*.jar' exclude '*-sources.jar'
+}
+
+task distSourceJar(type: Copy, dependsOn: [sourceJar]) {
+	from libsDir
+	into "${distsOutputDir}/srcs"
+	include '*-sources.jar'
+}
+
+task dist(type: Copy, dependsOn: [_clean, distJar, distSourceJar]) {
+	//Do nothing
+}
