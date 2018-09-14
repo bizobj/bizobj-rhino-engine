@@ -1,0 +1,9 @@
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
+    // https://mvnrepository.com/artifact/org.mozilla/rhino
+    implementation group: 'org.mozilla', name: 'rhino', version: '1.7.10'
+    
+    // Eclipse JSDT for Rhino Debugger
+    implementation devOpsFileTree(dir: 'local-libs/org.eclipse.wst.jsdt.debug/jars', include: ['*.jar'])
+}
