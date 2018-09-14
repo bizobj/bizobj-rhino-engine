@@ -1,4 +1,4 @@
-package net.thinkbase.js.rhino.ext.impl;
+package org.bizobj.js.rhino.ext.impl;
 
 import javax.swing.JFrame;
 

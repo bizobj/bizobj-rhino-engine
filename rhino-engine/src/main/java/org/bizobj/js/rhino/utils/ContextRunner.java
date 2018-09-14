@@ -1,4 +1,4 @@
-package net.thinkbase.js.rhino.utils;
+package org.bizobj.js.rhino.utils;
 
 import org.mozilla.javascript.Context;
 

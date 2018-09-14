@@ -1,10 +1,9 @@
-package net.thinkbase.js.rhino;
+package org.bizobj.js.rhino;
 
-import net.thinkbase.js.rhino.utils.ContextRunner;
-import net.thinkbase.js.rhino.utils.RhinoHelper;
-import net.thinkbase.js.rhino.utils.RhinoHelper.RetrieveResult;
-import net.thinkbase.js.rhino.utils.Utils;
-
+import org.bizobj.js.rhino.utils.ContextRunner;
+import org.bizobj.js.rhino.utils.RhinoHelper;
+import org.bizobj.js.rhino.utils.Utils;
+import org.bizobj.js.rhino.utils.RhinoHelper.RetrieveResult;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
 import org.mozilla.javascript.Scriptable;

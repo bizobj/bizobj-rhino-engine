@@ -1,8 +1,8 @@
-package net.thinkbase.js.rhino.ext;
+package org.bizobj.js.rhino.ext;
 
-import net.thinkbase.js.rhino.JsEngine;
-import net.thinkbase.js.rhino.ext.impl.DebuggerTools;
-import net.thinkbase.js.rhino.utils.Utils;
+import org.bizobj.js.rhino.JsEngine;
+import org.bizobj.js.rhino.ext.impl.DebuggerTools;
+import org.bizobj.js.rhino.utils.Utils;
 
 /**
  * The JsEngine manager
