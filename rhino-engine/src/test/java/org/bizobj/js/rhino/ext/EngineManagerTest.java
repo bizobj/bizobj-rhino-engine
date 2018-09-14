@@ -1,10 +1,9 @@
-package net.thinkbase.js.rhino.ext;
+package org.bizobj.js.rhino.ext;
 
 import java.io.IOException;
 
-import net.thinkbase.js.rhino.JsEngine;
-import net.thinkbase.js.rhino.utils.Utils;
-
+import org.bizobj.js.rhino.JsEngine;
+import org.bizobj.js.rhino.utils.Utils;
 import org.junit.Test;
 
 public class EngineManagerTest {
@@ -12,7 +11,7 @@ public class EngineManagerTest {
 		for(int i=0; i<5; i++){
 			String srcName = "EngineManagerTest." + i + ".js";
 			String src = Utils.readAsText(
-					this.getClass().getResourceAsStream("/" + srcName));
+					this.getClass().getResourceAsStream(srcName));
 			JsEngine jse = EngineManager.buildEngine(srcName);
 			jse.addObject("_NAME_", name);
 			jse.eval("rhino-js-engine-test-javascript/" + srcName, src);

@@ -6,4 +6,8 @@ dependencies {
     
     // Eclipse JSDT for Rhino Debugger
     implementation devOpsFileTree(dir: 'local-libs/org.eclipse.wst.jsdt.debug/dist/jars', include: ['*.jar'])
+    
+    // https://mvnrepository.com/artifact/junit/junit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
 }

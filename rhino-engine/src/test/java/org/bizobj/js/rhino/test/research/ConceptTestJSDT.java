@@ -1,12 +1,11 @@
-package net.thinkbase.js.rhino.test.research;
+package org.bizobj.js.rhino.test.research;
 
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
-import net.thinkbase.js.rhino.JsEngine;
-import net.thinkbase.js.rhino.utils.Utils;
-
+import org.bizobj.js.rhino.JsEngine;
+import org.bizobj.js.rhino.utils.Utils;
 import org.eclipse.wst.jsdt.debug.rhino.debugger.RhinoDebugger;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -31,7 +30,7 @@ public class ConceptTestJSDT {
 		jse.addObject("buf", buf);
 		
 		String srcFile = "ConceptTest.firstTest.js";
-		String src = Utils.readAsText(this.getClass().getResourceAsStream("/" + srcFile));
+		String src = Utils.readAsText(this.getClass().getResourceAsStream(srcFile));
 		jse.eval("rhino-js-engine-test-javascript/" + srcFile, src);
 		
 		assertEquals("1st line,2nd line,3rd line", buf.toString());
@@ -41,11 +40,11 @@ public class ConceptTestJSDT {
 		JsEngine jse = new JsEngine(this.getClass().getName());
 
 		String srcFile = "ConceptTest.secondTest-func.js";
-		String src = Utils.readAsText(this.getClass().getResourceAsStream("/" + srcFile));
+		String src = Utils.readAsText(this.getClass().getResourceAsStream(srcFile));
 		jse.eval("rhino-js-engine-test-javascript/" + srcFile, src);
 
 		srcFile = "ConceptTest.secondTest.js";
-		src = Utils.readAsText(this.getClass().getResourceAsStream("/" + srcFile));
+		src = Utils.readAsText(this.getClass().getResourceAsStream(srcFile));
 		jse.eval("rhino-js-engine-test-javascript/" + srcFile, src);
 	}
 

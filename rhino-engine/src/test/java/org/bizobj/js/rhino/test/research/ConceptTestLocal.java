@@ -1,4 +1,4 @@
-package net.thinkbase.js.rhino.test.research;
+package org.bizobj.js.rhino.test.research;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,9 +6,8 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 
-import net.thinkbase.js.rhino.JsEngine;
-import net.thinkbase.js.rhino.utils.Utils;
-
+import org.bizobj.js.rhino.JsEngine;
+import org.bizobj.js.rhino.utils.Utils;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mozilla.javascript.ContextFactory;
@@ -35,7 +34,7 @@ public class ConceptTestLocal {
 		JsEngine jse = new JsEngine(this.getClass().getName());
 		jse.addObject("buf", buf);
 		
-		String srcFile = "/ConceptTest.firstTest.js";
+		String srcFile = "ConceptTest.firstTest.js";
 		String src = Utils.readAsText(this.getClass().getResourceAsStream(srcFile));
 		jse.eval(srcFile, src);
 		
@@ -45,11 +44,11 @@ public class ConceptTestLocal {
 	public void secondTest() throws IOException {
 		JsEngine jse = new JsEngine(this.getClass().getName());
 
-		String srcFile = "/ConceptTest.secondTest-func.js";
+		String srcFile = "ConceptTest.secondTest-func.js";
 		String src = Utils.readAsText(this.getClass().getResourceAsStream(srcFile));
 		jse.eval(srcFile, src);
 
-		srcFile = "/ConceptTest.secondTest.js";
+		srcFile = "ConceptTest.secondTest.js";
 		src = Utils.readAsText(this.getClass().getResourceAsStream(srcFile));
 		jse.eval(srcFile, src);
 	}

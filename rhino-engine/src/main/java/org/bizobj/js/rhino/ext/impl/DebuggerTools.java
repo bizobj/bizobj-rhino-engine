@@ -80,6 +80,7 @@ public class DebuggerTools {
 
 	private static void initLocalDebugger(String setting){
 		resetDebugger();
+		
 		String title = setting.substring(TYPE_PREFIX_LOCAL.length());
 		if (title.length() <=0) title = "Rhino debugger";
 		localDebugger = new Main(title);
