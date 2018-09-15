@@ -18,7 +18,7 @@ public class EngineManager {
 	 *         <code>jsdt://transport=socket,suspend={y|n},address={tcp port}</code></li>
 	 * </ul> 
 	 */
-	public static final String DEBUGGER_ENV_VAR_NAME = "THINKBASE_NET_RHINO_DEBUGGER";
+	public static final String DEBUGGER_ENV_VAR_NAME = "BIZOBJ_ORG_RHINO_DEBUGGER";
 	/**
 	 * The java system property name of debugger setting string,
 	 * should overwrite the environment variable setting
